@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Education Guru NP - Video Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/vdoplay/videoplay.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Education Guru NP</h1>
+
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">
+    🌙 Dark Mode
+  </button><br>
+<br>
+  <!-- Video Section -->
+  <div class="video-section hidden" id="videoSection">
+    <button class="exit-btn" onclick="exitVideo()">✖ Exit</button>
+<br>
+    <div class="video-wrapper animate">
+      <iframe id="videoFrame" allowfullscreen></iframe>
+    </div>
+
+    <!-- Actions BELOW video -->
+    <div class="actions">
+      <button class="btn like-btn" id="likeBtn">
+        👍 Like <span id="likeCount">0</span>
+      </button>
+
+      <button class="btn subscribe-btn" onclick="subscribeChannel()">
+        🔔 Subscribe
+      </button>
+    </div>
+  </div>
+
+  <!-- Units -->
+  <div class="unit-list" id="unitList">
+
+    <div class="unit">
+      <h2 onclick="toggleUnit(this)">एकाइ १</h2>
+      <div class="chapters">
+        <button onclick="loadVideo('u1c1')"> पाठ १: अर्थशास्त्रको अर्थ र परिचय </button>
+        <button onclick="loadVideo('u1c2')">पाठ २:  अर्थशास्त्रको विषयवस्तु र प्रकृति </button>
+        <button onclick="loadVideo('u1c3')">पाठ ३: वस्तु तथा सेवा </button>
+      </div>
+    </div>
+
+    <div class="unit">
+      <h2 onclick="toggleUnit(this)"> एखाइ २</h2>
+      <div class="chapters">
+        <button onclick="loadVideo('u2c1')">पाठ १ उपयोगिता </button>
+        <button onclick="loadVideo('u2c2')">पाठ २ माग पुर्ती </button>
+        <button onclick="loadVideo('u2c3')">पाठ ३ उत्पादनका साधन </button>
+        <button onclick="loadVideo('u2c4')">पाठ ४ उत्पादन </button>
+      </div>
+    </div>
+
+    <div class="unit">
+      <h2 onclick="toggleUnit(this)">एकाइ ३ </h2>
+      <div class="chapters">
+        <button onclick="loadVideo('u3c1')">पाठ १ राष्ट्रिय आय </button>
+        <button onclick="loadVideo('u3c2')">पाठ २ मुद्रा </button>
+        <button onclick="loadVideo('u3c3')">पाठ ३ बैंक तथा वित्तीय संस्थाहरू </button>
+      </div>
+    </div>
+
+    <div class="unit">
+      <h2 onclick="toggleUnit(this)">एकाइ ४ </h2>
+      <div class="chapters">
+        <button onclick="loadVideo('u4c1')">पाठ १ आर्थिक वृद्धि र विकास </button>
+        <button onclick="loadVideo('u4c2')">पाठ २ आर्थिक विकासका समसामयिक मुद्दा </button>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>© 2025 Education Guru NP</footer>
+</div>
+
+<script src="/vdoplay/videoplay.js"></script>
+</body>
+</html>
